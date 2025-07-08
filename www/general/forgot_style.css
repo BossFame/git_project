@@ -1,0 +1,32 @@
+    #background{
+        background-color: rgb(253, 253, 195);
+    }
+    #title{
+        color: green;
+        font-family: Eb garamond;
+    }
+    #header{
+        justify-items: center;
+        text-transform: uppercase;
+    }
+    #signup{
+        background-color: green;
+        justify-items: center;
+        color: white;
+        text-transform: uppercase;
+    }
+    #head{
+        justify-items: center;
+        font-family: eb garamond;
+    }
+    #center{
+        margin-left: 300px;
+        
+    }
+    #bypass a{
+        text-decoration: none;
+        color: green;
+    }
+    #bypass a:hover{
+        color: yellowgreen;
+    }

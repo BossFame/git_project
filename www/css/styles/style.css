@@ -1,0 +1,106 @@
+#container {
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+}
+
+#header{
+    border: 1px solid brown;
+    width: 100%;
+    height: 15%;
+    display: flex;
+}
+
+#nav-bar{
+    border: 1px solid blue;
+    width: 100%;
+    height: 8%;
+    background-color: black;
+}
+
+#breadcrumb{
+    border: 1px solid red;
+    width: 100%;
+    height: 10%;
+}
+
+#logo{
+    border: 1px solid brown; 
+    margin-left: 100px;
+    padding-top: 10px;
+    color: orange;
+    cursor: pointer;
+}
+
+#header-info{
+    /* border: 1px solid green; */
+    margin-left: 100px;
+    padding-top: 25px;
+}
+
+#menu{
+    border: 1px solid white;
+    margin: 0px;
+    list-style-type: none;
+    height: 100px;
+}
+
+#menu li{
+    border: 1px solid yellow;
+    display: inline-block;
+    
+}
+
+#menu li a{
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 14px;
+}
+
+#menu li a:hover{
+    background-color: white;
+    color: black;
+}
+
+#main-block{
+    border-radius: 1px solid rgb(160, 0, 27);
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+#products-holder{
+    border: 1px solid blue;
+    width: 98%;
+    height: 80%;
+    margin-top: 60px;
+    list-style-type: none;
+    flex-wrap: wrap;
+    display: flex;
+}
+#item{
+    border: 1px solid green;
+    width: 30%;
+    height: 100%;
+    
+}
+
+.product-image{
+    border: 1px solid blue;
+    width: 90%;
+    height: 35vh;
+    margin: auto;
+    margin-top: 10px;
+    background-image: url(../images/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* #text{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: line-through;
+} */

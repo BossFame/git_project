@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lungu Hills Login</title>
+    <!-- <link type="text/css" rel="stylesheet" href="../style.css"/> -->
+</head>
+<style>
+    #background{
+        background-color: rgb(253, 253, 195);
+    }
+    #title{
+        color: green;
+        font-family: Eb garamond;
+    }
+    #header{
+        justify-items: center;
+        text-transform: uppercase;
+    }
+
+    #head{
+        justify-items: center;
+    }
+    #center{
+        margin-left: 300px;
+        
+    }
+    #bypass a{
+        text-decoration: none;
+        color: green;
+    }
+    #bypass a:hover{
+        color: yellowgreen;
+    }
+       #bypas a{
+        text-decoration: none;
+        color: red;
+    }
+    #bypas a:hover{
+        color: yellowgreen;
+    }
+    #signup{
+        background-color: green;
+        justify-items: center;
+        color: white;
+        text-transform: uppercase;
+        width: 100%;
+        /* overflow: hidden; */
+        white-space: nowrap;
+    }
+    .scroll-text{
+            animation: scroll-left 10s linear infinite;
+            padding-left: 100%;
+    }
+    @keyframes scroll-left {
+        0% {
+            transform: translatex(0%);
+        }
+        100% {
+            transform: translatex(-100%);
+        }
+    }
+</style>
+<body id="background">
+<div id="header">
+<h1 id="title">Welcome to Lungu Hills</h1>
+</div>
+<hr/>
+<div id="head">
+    <h3>Create Your Lungu Hills bank account</h3>
+</div>
+<div id="signup">
+    <h3 id="dash">Enter Login Details</h3>
+</div>
+<div id="center">
+    <p>Email: <input type="email" name="email" id="email" placeholder="Email"/></p>
+    <p>Password: <input type="password" name="hash" id="hash" placeholder="Password"/></p>
+    <button type="button" name="button" id="continue">Continue</button>
+    <br/>
+    <br/>
+    <p id="bypas"><a href="forgot.php">Forgot Password?</a></p>
+    <p style='color:black'>Your Information is protected with industry-standard encryption. Do not share your credentials with anyone.</p>
+
+    <p id="bypass">Dont have and Account yet, Click here to <a href="signup.html">Sign Up</a></p>
+</div>
+    <script type="text/javascript" src="login.js"></script>
+</body>
+</html>

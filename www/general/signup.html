@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lungu Hills Login</title>
+    <link type="text/css" rel="stylesheet" href="../style.css"/>
+</head>
+<style>
+    #background{
+        background-color: rgb(253, 253, 195);
+    }
+    #title{
+        color: green;
+        font-family: Eb garamond;
+    }
+    #header{
+        justify-items: center;
+        text-transform: uppercase;
+    }
+    #signup{
+        background-color: green;
+        justify-items: center;
+        color: white;
+        text-transform: uppercase;
+    }
+    #head{
+        justify-items: center;
+        font-family: eb garamond;
+    }
+    #center{
+        margin-left: 300px;
+        
+    }
+    #bypass a{
+        text-decoration: none;
+        color: green;
+    }
+    #bypass a:hover{
+        color: yellowgreen;
+    }
+</style>
+<body id="background">
+<div id="header">
+<h1 id="title">Welcome to Lungu Hills</h1>
+</div>
+<hr/>
+<div id="head">
+    <h3>Create Your Lungu Hills bank account</h3>
+    <p>Open a secure, personal banking account in just a few minutes. Experience smarter banking with real-time access, seamless transactions, and 24/7 account monitoring</p>
+</div>
+<div id="signup">
+    <h3>Sign up for a new Account</h3>
+</div>
+<div id="center">
+    <p >Account Name: <input type="text" name="fullname" id="fullname" placeholder="Fullname"/></p>
+    <p>Email: <input type="email" name="email" id="email" placeholder="Email"/></p>
+    <p>Password: <input type="password" name="hash" id="hash" placeholder="Password"/></p>
+    <p>Confirm Password: <input type="password" name="confirm_hash" id="confirm_hash" placeholder="Confirm Password"/></p>
+    <button type="button" name="button" id="create">Create Account</button>
+
+    <p id="bypass">Already have an account, Click here to <a href="login.html">Sign In</a></p>
+</div>
+    <script type="text/javascript" src="signup.js"></script>
+</body>
+</html>

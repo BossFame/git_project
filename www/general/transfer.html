@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link type="text/css" rel="stylesheet" href="admin_dashboard.css"/> -->
+</head>
+<style>
+    #background{
+        background-color: rgb(253, 253, 195);
+        justify-items: center;
+    }
+
+    #title{
+        color: green;
+        text-transform: uppercase;
+    }
+    #header{
+        border: 2px solid white;
+        width: 100%;
+        height: 20%;
+        justify-items: center;
+        background-color: green;
+    }
+    #panel{
+        display: flex;
+        text-decoration: none;
+        margin: 0;
+        list-style-type: none;
+        height: 100%;
+    }
+    #panel li{
+        border: 1px solid green;
+        margin-left: 20px; 
+
+    }
+    #panel li a{
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        padding: 5px;
+    }
+
+    #panel li a:hover{
+        background-color: white;
+        color: black;
+    }
+
+    #panel2{
+        border: 1px solid green;
+        width: 100%;
+        height: 50px;
+        align-content: center;
+    }
+
+    #panel2 p{
+        /*border: 1px solid blue;*/
+        margin-left: 30px;
+        font-weight: bold;
+        
+    }
+
+    .first-image{
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        white-space: nowrap;
+    }
+    
+    #justify{
+        justify-items: center;
+    }
+
+    #animate{
+        /* border: 2px solid brown;  */
+        width: 100%;
+        height: 25px;
+        background-color: green;
+        white-space: nowrap; 
+        
+    }
+    #dash2{
+        animation: scroll-left2 8s linear infinite;
+        padding-left: 50%;
+        color: white;
+        word-spacing: 20px;
+        position: relative;
+        padding-top: 5px;
+    }
+    @keyframes scroll-left2 {
+        0%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+    #space{
+        margin-top: 3px;
+    }
+    #r_box{
+        border: 1px solid green;
+        margin: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+        background-color: white;
+        
+    }
+    #recipient{
+        border: 1px solid green;
+        background-color: rgb(253, 253, 195);
+        padding-left: 5px;
+    }
+
+    #cent{
+        justify-items: center;
+        padding-top: 3px;
+    }
+    #grey{
+        background-color: green;
+        border-radius: 10px;
+        width: 180px;
+        padding: 5px;
+         padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+</style>
+
+<body id="background">
+    <h1 id="title">Welcome to Lungu Hills</h1>
+
+    <div id="justify">
+        <p id="user" style="text-transform: capitalize;">Hi</p>
+        <p id="user1">Your Id is *** </p>
+    </div>
+    <hr/>
+    <div id="header">
+        <ul id="panel">
+            <li id=""><a href="dashboard.html">Home</a></li>
+            <li id=""><a href="transfer.html">Transfer</a></li>
+            <li id=""><a href="user_statement.html">Account Statement</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+    </div>
+    <div id="panel2">
+        <p id="balance" style="text-transform: uppercase;">Your account Balance is: </p>
+    </div>
+    <div id="animate">
+        <p id="dash2">Lungu Hills &nbsp;&nbsp;* &nbsp;&nbsp;Lungu Hills &nbsp;&nbsp; * Lungu Hills &nbsp;&nbsp;* &nbsp;&nbsp;Lungu Hills</p>
+    </div>
+    <div id="space"></div>
+    </div>
+    <div id="r_box">
+        <div  id="cent">
+        <h3>Make A Transfer</h3>
+        </div>        
+        <div id="grey">
+        <p id="recipient">Recipient Account</p>
+        <input type="text" name="account_number" id="account" placeholder="Recipient Acc. No."/>
+        </div>
+        <br/>
+        <div id="grey">
+        <p id="recipient">Amount</p>
+        <input type="text" name="amount" id="amount" placeholder="$1 - 5,000,000.00"/>
+        </div>
+        <br/>
+        <div id="grey">
+        <p id="recipient">Remark</p>
+        <textarea name="remark" placeholder="What's this for?(Optional)"></textarea>
+        </div>
+        <br/>
+        <button type="button" name="button" id="button">Confirm</button>
+        
+    </div>
+
+
+    
+
+    <script type="text/javascript" src="transfer.js"></script>
+    <script type="text/javascript" src="logout.js"></script>
+</body>
+</html>
