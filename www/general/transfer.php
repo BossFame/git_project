@@ -90,8 +90,18 @@ if($state -> rowCount() < 1){
             ":cid" => $user['customer_id']
         );
         $debit ->execute($debit_data);
-        $response['current_balance'] = "$senders_final_balance";
+        //$response['current_balance'] = "$senders_final_balance";
         $response['success'] = "Your transaction was successful";
+
+    $stmtBal = $conn->prepare("SELECT account_balance FROM customer WHERE customer_id = :cid");
+    $stmtBal->bindParam(":cid", $user['customer_id']);
+    $stmtBal->execute();
+
+    $bal = $stmtBal->fetch(PDO::FETCH_ASSOC)
+
+    if ($stmtBal -> rowCount() > 0) {
+        $response['acc'] = $bal['account_balance'];
+    }
 
 
 

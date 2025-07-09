@@ -11,7 +11,7 @@ window.addEventListener('load', function(e) {
         if (localStorage.getItem('bal')) {
             var session = atob(localStorage.getItem('bal'));
             var bal = session;
-            //document.getElementById('balance').innerHTML = "Account Balance: " + bal;
+            document.getElementById('balance').innerHTML = "Account Balance: " + bal;
         }
 
         document.getElementById('user').innerHTML = "Hi, " + data.name;
