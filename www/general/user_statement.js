@@ -4,16 +4,13 @@ window.addEventListener('load', function(e) {
 
         var data = {
             "name": local_session.account_name,
-            "number": local_session.account_number
+            "number": local_session.account_number,
+            "bal": local_session.account_balance
         };
 
             var json = JSON.stringify(data);
-        if (localStorage.getItem('bal')) {
-            var session = atob(localStorage.getItem('bal'));
-            var bal = session;
-            document.getElementById('balance').innerHTML = "Account Balance: " + bal;
-        }
-
+        
+        document.getElementById('balance').innerHTML = "Account Balance: " + data.bal;
         document.getElementById('user').innerHTML = "Hi, " + data.name;
         document.getElementById('user1').innerHTML = "Account Number: " + data.number;
 

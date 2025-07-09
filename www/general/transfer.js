@@ -36,16 +36,20 @@ button.addEventListener('click', function(e){
             if(xhr.readyState == 4 && xhr.status == 200){
             console.log(xhr.responseText);
              var res = JSON.parse(xhr.responseText);
-             if(res.pass){
-                alert(res.success);
-                document.getElementById('balance').innerHTML = "Account Balance: " + res.current_balance;
-                var balance = res.current_balance;
-                //console.log(balance);
-                localStorage.setItem('bal', btoa(balance));
-                window.location = "user_statement.html";
+             if (res.pass) {
+    alert(res.success);
+            var newBalance = res.current_balance; 
 
-            }else{
-                alert(res.error);
+            document.getElementById('balance').innerHTML = "Account Balance: " + newBalance;
+
+            let sessionData = JSON.parse(atob(localStorage.getItem('det')));
+            sessionData = {...sessionData, account_balance: newBalance };
+
+            localStorage.setItem('det', btoa(JSON.stringify(sessionData)));
+
+
+                }else{
+                    alert(res.error);
             }
 
             }
