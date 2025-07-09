@@ -38,8 +38,8 @@ button.addEventListener('click', function(e){
              var res = JSON.parse(xhr.responseText);
              if(res.pass){
                 alert(res.success);
-                document.getElementById('balance').innerHTML = "Account Balance: " + res.acc;
-                var balance = res.acc;
+                document.getElementById('balance').innerHTML = "Account Balance: " + res.current_balance;
+                var balance = res.current_balance;
                 //console.log(balance);
                 localStorage.setItem('bal', btoa(balance));
                 window.location = "user_statement.html";
