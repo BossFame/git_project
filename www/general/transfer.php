@@ -15,6 +15,7 @@ $user = $statement->fetch(PDO::FETCH_ASSOC);
 if($array){
     $account = trim($array['account'] ?? '');
     $amount = trim($array['amount'] ?? '');
+    $pin = $array['pin'] ?? '';
     $error = array();
 
 $state = $conn ->prepare("SELECT * FROM customer WHERE account_number = :an");
@@ -46,7 +47,26 @@ if($state -> rowCount() < 1){
     }elseif($amount > $user['account_balance']){
         $error['amount'] = "Enter Valid Amount";
     }
+
+    if(empty($pin)){
+        $error['pin'] = "Enter Pin";
+    }elseif(!is_numeric($pin)){
+        $error['pin'] = "Enter numeric value only";
+    }elseif(strlen($pin) > 4){
+        $error['pin'] = "Enter appropriate account pin";
+    }
+
     $response = [];
+
+    $stmt = $conn ->prepare("SELECT * FROM customer WHERE hash = :hs");
+    $stmt ->bindParam(":hs", $pin);
+    $stmt -> execute();
+
+    if($stmt -> rowCount() < 1){
+        $response['pin'] = "Incorrect Pin";
+    }
+
+
     if(empty($error)){
         $response['pass'] = true;
         $response['message'] = "Validation Passed Succesfully";

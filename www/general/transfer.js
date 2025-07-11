@@ -11,18 +11,19 @@ window.addEventListener('load', function(e){
     document.getElementById('user').innerHTML = "Hi, " + data.name;
     document.getElementById('user1').innerHTML = "Account Number: " + data.number;
     document.getElementById('balance').innerHTML = "Account Balance: " + data.account;
-    }
-})
+
 
 var button = document.getElementById('button');
 button.addEventListener('click', function(e){
     var account = document.getElementById('account');
     var amount = document.getElementById('amount');
+    var pin = document.getElementById('pin');
 
-    if(account.value !== "", amount.value !==""){
+    if(account.value !== "" && amount.value !=="" && pin.value !==""){
         var data = {
             "account": account.value,
             "amount": amount.value,
+            "pin": pin.value,
             "email": atob(localStorage.getItem('ui'))
         }
 
@@ -62,4 +63,10 @@ button.addEventListener('click', function(e){
         alert('All field is required');
     }
 
+})
+
+    }else{
+        alert("You are not logged in");
+        window.location = "login.html";
+    }
 })
