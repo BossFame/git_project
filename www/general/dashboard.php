@@ -11,8 +11,8 @@ $row = $state->fetch(PDO::FETCH_ASSOC);
 
 if($state ->rowCount() > 0){
     $response['pass'] = true;
-    $stmt = $conn ->prepare("SELECT final_balance FROM transactions WHERE senders_account = :an ORDER BY transaction_id DESC LIMIT 1");
-    $stmt ->bindParam(":an", $row['account_number']);
+    $stmt = $conn ->prepare("SELECT final_balance FROM transactions WHERE senders_account = :an OR receivers_account = :an ORDER BY transaction_id DESC LIMIT 1");
+    $stmt ->bindParam(":an", $row['customer_id']);
     $stmt ->execute();
 
     $bal = $stmt->fetch(PDO::FETCH_ASSOC);

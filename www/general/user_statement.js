@@ -42,8 +42,10 @@ window.addEventListener('load', function(e) {
         xhr.open('POST','user_statement.php', true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(json);
+
     }else{
         alert("You're not logged in");
         window.location = "login.html";
     }
+    
 });
